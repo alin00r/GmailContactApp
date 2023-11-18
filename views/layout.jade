@@ -1,0 +1,77 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title  #{title}
+    link(rel='shortcut icon' type='image/jpg' href='/images/news2.png')
+    style.
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+    link(rel='stylesheet' href='/stylesheets/style.css')
+  body
+    section
+      .container
+        .contactInfo
+          div
+            h2 Contact Info
+            ul.info
+              li
+                span
+                  img(src='/assest/images/location.png')
+                span
+                  | ismailia Egypt
+                  br
+                  |                                     Egypt, EG
+                  br
+                  |                                     11472
+              li
+                span
+                  img(src='/assest/images/mail.png')
+                // <span>nassosanagn@gmail.com</span>
+                span
+                  a(href='mailto: alinoorspam@gmail.com') alinoorspam@gmail.com
+              li
+                span
+                  img(src='/assest/images/call.png')
+                span +201015559496
+          ul.sci
+            li
+              a(href='https://www.facebook.com/')
+                img(src='/assest/images/1.png')
+            li
+              a(href='https://www.instagram.com/')
+                img(src='/assest/images/3.png')
+            li
+              a(href='https://twitter.com/')
+                img(src='/assest/images/2.png')
+            li
+              a(href='https://www.linkedin.com/in/')
+                img(src='/assest/images/5.png')
+        .contactForm
+         form(method= 'post', action='contact/send')
+          h2 Send a Message
+          .formBox
+            .inputBox.w50
+              input(type='text' name='name' required='')
+              span First Name
+            .inputBox.w50
+              input(type='text' name='lname' required='')
+              span Last Name
+            .inputBox.w50
+              input(type='email' name='email' required='')
+              span Email Address
+            .inputBox.w50
+              input(type='text' name='phone' required='')
+              span Mobile Number
+            .inputBox.w100
+              textarea(required='' name='message')
+              span Write your message here...
+            .inputBox.w100
+              input(type='submit' value='send')
